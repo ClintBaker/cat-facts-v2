@@ -1,0 +1,20 @@
+.cat {
+  float: left;
+  padding: 55px;
+  margin: 15px;
+  background: #eaeaea;
+  cursor: pointer;
+}
+
+.cat img {
+  border-radius: 50%;
+  border: 1px solid darkgray;
+}
+
+.facts {
+  clear: both;
+  background: #eaeaea;
+  min-height: 200px;
+  padding: 15px;
+  margin: 15px;
+}
