@@ -37,6 +37,8 @@ catOne.addEventListener("click", function () {
   catOne.className = "cat active";
   catTwo.className = "cat";
   catThree.className = "cat";
+  document.getElementById("all-facts").className = "give-me-facts-btn";
+  document.getElementById("fact").className = "fact";
   if (cats[0].fact === 0) {
     document.getElementById("fact").innerHTML = facts[0];
     cats[0].fact = 1;
@@ -50,6 +52,8 @@ catTwo.addEventListener("click", function () {
   catOne.className = "cat";
   catTwo.className = "cat active";
   catThree.className = "cat";
+  document.getElementById("all-facts").className = "give-me-facts-btn";
+  document.getElementById("fact").className = "fact";
   if (cats[1].fact === 2) {
     document.getElementById("fact").innerHTML = facts[2];
     cats[1].fact = 3;
@@ -63,6 +67,8 @@ catThree.addEventListener("click", function () {
   catOne.className = "cat";
   catTwo.className = "cat";
   catThree.className = "cat active";
+  document.getElementById("all-facts").className = "give-me-facts-btn";
+  document.getElementById("fact").className = "fact";
   if (cats[2].fact === 4) {
     document.getElementById("fact").innerHTML = facts[4];
     cats[2].fact = 5;
@@ -71,3 +77,18 @@ catThree.addEventListener("click", function () {
     cats[2].fact = 4;
   }
 });
+
+function getAllFacts() {
+  document.getElementById("all-facts").className = "active give-me-facts-btn";
+  document.getElementById("fact").className = "facts-list";
+  document.getElementById("fact").innerHTML = "<ul>";
+  catOne.className = "cat";
+  catTwo.className = "cat";
+  catThree.className = "cat";
+  for (var i = 0; i < facts.length; i++) {
+    document.getElementById("fact").innerHTML += `<li>${facts[i]}</li>`;
+  }
+  document.getElementById("fact").innerHTML += "</ul>";
+}
+
+document.getElementById("all-facts").addEventListener("click", getAllFacts);
