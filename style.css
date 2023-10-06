@@ -24,12 +24,12 @@ header p {
 .cat {
   padding: 35px;
   margin: 5px 10px;
-  background: #02e8cb;
+  background: #eaeaea;
   cursor: pointer;
 }
 
 .active {
-  background: #02ecf2;
+  background: #02e8cb;
 }
 
 .cat img {
@@ -38,7 +38,7 @@ header p {
 }
 
 .facts {
-  background: #02e8cb;
+  background: #eaeaea;
   min-height: 200px;
   padding: 20px 50px;
   margin: 15px 50px;
