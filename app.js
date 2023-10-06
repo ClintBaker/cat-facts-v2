@@ -10,15 +10,18 @@ const facts = [
 const cats = [
   {
     name: "Steve",
-    img: "https://loremflickr.com/250/199",
+    img: "https://loremflickr.com/200/150",
+    fact: 0,
   },
   {
     name: "Tony",
-    img: "https://loremflickr.com/250/201",
+    img: "https://loremflickr.com/200/151",
+    fact: 2,
   },
   {
     name: "Snowball",
-    img: "https://loremflickr.com/250/200",
+    img: "https://loremflickr.com/200/149",
+    fact: 3,
   },
 ];
 
@@ -26,30 +29,45 @@ const catOne = document.getElementById("cat1");
 const catTwo = document.getElementById("cat2");
 const catThree = document.getElementById("cat3");
 
-catOne.innerHTML = `<div class="cat"><h3>${cats[0].name}</h3><img src="${cats[0].img}"/></div>`;
-catTwo.innerHTML = `<div class="cat"><h3>${cats[1].name}</h3><img src="${cats[1].img}"/></div>`;
-catThree.innerHTML = `<div class="cat"><h3>${cats[2].name}</h3><img src="${cats[2].img}"/></div>`;
+catOne.innerHTML = `<h3>${cats[0].name}</h3><img src="${cats[0].img}"/>`;
+catTwo.innerHTML = `<h3>${cats[1].name}</h3><img src="${cats[1].img}"/>`;
+catThree.innerHTML = `<h3>${cats[2].name}</h3><img src="${cats[2].img}"/>`;
 
 catOne.addEventListener("click", function () {
-  if (Math.random() > 0.5) {
+  catOne.className = "cat active";
+  catTwo.className = "cat";
+  catThree.className = "cat";
+  if (cats[0].fact === 0) {
     document.getElementById("fact").innerHTML = facts[0];
+    cats[0].fact = 1;
   } else {
     document.getElementById("fact").innerHTML = facts[1];
+    cats[0].fact = 0;
   }
 });
 
 catTwo.addEventListener("click", function () {
-  if (Math.random() > 0.5) {
+  catOne.className = "cat";
+  catTwo.className = "cat active";
+  catThree.className = "cat";
+  if (cats[1].fact === 2) {
     document.getElementById("fact").innerHTML = facts[2];
+    cats[1].fact = 3;
   } else {
     document.getElementById("fact").innerHTML = facts[3];
+    cats[1].fact = 2;
   }
 });
 
 catThree.addEventListener("click", function () {
-  if (Math.random() > 0.5) {
+  catOne.className = "cat";
+  catTwo.className = "cat";
+  catThree.className = "cat active";
+  if (cats[2].fact === 4) {
     document.getElementById("fact").innerHTML = facts[4];
+    cats[2].fact = 5;
   } else {
     document.getElementById("fact").innerHTML = facts[5];
+    cats[2].fact = 4;
   }
 });

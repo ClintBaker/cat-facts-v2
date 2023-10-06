@@ -1,9 +1,35 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background: #00457c;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+header p {
+  margin-left: 5px;
+}
+
+.cats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .cat {
-  float: left;
-  padding: 55px;
-  margin: 15px;
-  background: #eaeaea;
+  padding: 35px;
+  margin: 5px 10px;
+  background: #02e8cb;
   cursor: pointer;
+}
+
+.active {
+  background: #02ecf2;
 }
 
 .cat img {
@@ -12,9 +38,12 @@
 }
 
 .facts {
-  clear: both;
-  background: #eaeaea;
+  background: #02e8cb;
   min-height: 200px;
-  padding: 15px;
-  margin: 15px;
+  padding: 20px 50px;
+  margin: 15px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
